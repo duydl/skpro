@@ -151,6 +151,7 @@ json_url = "https://github.com/sktime/skpro/blob/main/docs/source/_static/switch
 # Define the version we use for matching in the version switcher.
 version_match = os.environ.get("READTHEDOCS_VERSION")
 
+print("check release", release)
 # If READTHEDOCS_VERSION doesn't exist, we're not on RTD
 # If it is an integer, we're in a PR build and the version isn't correct.
 if not version_match or version_match.isdigit():
@@ -163,6 +164,7 @@ if not version_match or version_match.isdigit():
     else:
         version_match = "v" + release
 
+print("check jsonurl", json_url)
 html_theme_options = {
     "icon_links": [
         {
